@@ -10,7 +10,7 @@
 define( 'FMC_APP_PATH', '/var/www/phpdev/FileManagerCabal');
 
 // path de url
-define( 'FMC_URL_PATH', '');
+define( 'FMC_URL', '');
 
 require_once( 'config_system.inc.php' );
 
