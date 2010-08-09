@@ -14,13 +14,13 @@
 
             <div id="pie">
                 <p>
-                    <small>acerca</small>
-                    <small>|</small>
-                    <small>PHPCabal</small>
-                    <small>|</small>
-                    <small>2010</small>
-                    <small>|</small>
-                    <small>GPLv3</small>
+                    <span>acerca</span>
+                    <span>|</span>
+                    <span>PHPCabal</span>
+                    <span>|</span>
+                    <span>2010</span>
+                    <span>|</span>
+                    <span>GPLv3</span>
                 </p>
             </div>
         </div>
