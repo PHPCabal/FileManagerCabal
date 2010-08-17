@@ -6,6 +6,8 @@
                 <span>El manejador de archivos de PHPCabal</span>
             </div>
 
+<?php require_once( $_SERVER['DOCUMENT_ROOT'] . '/lib/nav.inc.php' ); ?>
+
             <div id="contenido">
                 <p>
                     Hola, mundo!
@@ -14,13 +16,13 @@
 
             <div id="pie">
                 <p>
-                    <span>acerca</span>
+                    <span><a href="/acerca.php">acerca</a></span>
                     <span>|</span>
-                    <span>PHPCabal</span>
+                    <span><a href="http://groups.google.com/group/PHPCabal">PHPCabal</a></span>
                     <span>|</span>
-                    <span>2010</span>
+                    <span><a href="http://en.wikipedia.org/wiki/2010"><?php echo date( 'Y' ); ?></a></span>
                     <span>|</span>
-                    <span>GPLv3</span>
+                    <span><a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a></span>
                 </p>
             </div>
         </div>
