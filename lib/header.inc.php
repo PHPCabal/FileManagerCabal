@@ -12,13 +12,13 @@
         <title>FileManagerCabal</title>
 
         <!--CSS, feeds & favicon -->
-        <link href="/images/favicon.ico" rel="shortcut icon" />
-        <link href="/images/favicon.ico" rel="favicon" />
-        <link href="/css/default.css" media="screen" rel="stylesheet" type="text/css" />
-        <link href="/feed/noticias.rss" rel="alternate" type="application/rss+xml" title="Noticias" />
+        <link href="<?php echo FMC_URL_PATH; ?>/images/favicon.ico" rel="shortcut icon" />
+        <link href="<?php echo FMC_URL_PATH; ?>/images/favicon.ico" rel="favicon" />
+        <link href="<?php echo FMC_URL_PATH; ?>/css/default.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="<?php echo FMC_URL_PATH; ?>/feed/noticias.rss" rel="alternate" type="application/rss+xml" title="Noticias" />
 
         <!--Javascript -->
-        <script type="text/javascript" charset="utf-8" src="/js/main.js"></script>
+        <script type="text/javascript" charset="utf-8" src="<?php echo FMC_URL_PATH; ?>/js/default.js"></script>
     </head>
 
     <body>
