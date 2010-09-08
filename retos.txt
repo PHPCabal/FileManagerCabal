@@ -1,0 +1,18 @@
+- Parsear un archivo xml; con los elementos:
+<xml definition>
+<nav>
+    <link>
+	<titulo></titulo>
+        <url></url>
+    </link>
+</nav
+
+y, de ahí, generamos una lista de links de la siguiente manera
+
+<ul>
+  <li><a href="http://url/">titulo</a></li>
+</ul>
+
+- Crear una DB y conectarse usando mysqli_init y mysqli_real_connect (buscar en manual php.net)
+
+- Crear una tabla 'usuarios' y ponerle los campos (id, usuario, password y email) e insertar unos 5 usuarios. No usar herramientas con interfaz gráfica (GUI); solo SQL.
