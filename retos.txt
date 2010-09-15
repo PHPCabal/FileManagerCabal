@@ -1,18 +1,3 @@
-- Parsear un archivo xml; con los elementos:
-<xml definition>
-<nav>
-    <link>
-	<titulo></titulo>
-        <url></url>
-    </link>
-</nav
+- implementar un sistema con SimpleXML para poder generar el nav a partir de un archivo XML. Debes trabajar en application/lib/nav.inc.php
 
-y, de ahí, generamos una lista de links de la siguiente manera
-
-<ul>
-  <li><a href="http://url/">titulo</a></li>
-</ul>
-
-- Crear una DB y conectarse usando mysqli_init y mysqli_real_connect (buscar en manual php.net)
-
-- Crear una tabla 'usuarios' y ponerle los campos (id, usuario, password y email) e insertar unos 5 usuarios. No usar herramientas con interfaz gráfica (GUI); solo SQL.
+- implementar filtrado de campos en la forma de registro.
