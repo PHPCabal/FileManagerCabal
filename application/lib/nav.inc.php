@@ -1,3 +1,18 @@
+<?php 
+    // leer archivo XML y ponerlo en una variable
+    $xmlFile = FMC_APP_PATH . '/nav.xml';
+    $fp = fopen( $xmlFile, 'r' );
+    $navXML = fread( $fp, filesize($xmlFile) );
+    fclose( $fp );
+
+    // procesar el XML
+    $xml = new SimpleXMLElement($navXML);
+    $links = '';
+
+    foreach ($xml->link as $link) {
+        $links .= "<li><a href='" . FMC_URL . "{$link->url}' title='{$link->title}'>{$link->label}</a></li>\n";
+    }
+?>
                 <ul id="nav">
-                    <li><a href="<?php echo FMC_URL; ?>/index.php">inicio</a></li>
+<?php echo $links; ?>
                 </ul>

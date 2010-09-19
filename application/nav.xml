@@ -1,0 +1,14 @@
+<?xml version='1.0' standalone='yes'?>
+<links>
+    <link>
+        <url>/index.php</url>
+        <title>Ir al inicio</title>
+        <label>inicio</label>
+    </link>
+    
+    <link>
+        <url>/README</url>
+        <title>Ver de qué trata esta aplicación</title>
+        <label>acerca</label>
+    </link>
+</links>
