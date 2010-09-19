@@ -1,0 +1,19 @@
+<?php
+
+//
+// Base de Datos (MySQL)
+//
+
+// host
+define( 'FMC_DB_HOST', 'localhost' );
+
+// usuario (no usar root!!)
+define( 'FMC_DB_USER', 'fmcabalUser02' );
+
+// contraseña
+define( 'FMC_DB_PASSWORD', 'P4s5w@r6' );
+
+// nombre de la base de datos
+define( 'FMC_DB_DATABASE', 'fmcabal' );
+
+?>
