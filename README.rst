@@ -8,4 +8,5 @@ El proeyecto se irá desarrollando poco a poco; a medida que los newbies partici
 Éste es solo para aprender.
 
 PHPCabal: http://groups.google.com/group/PHPCabal
+
 LinuxCabal, A.C.: http://linuxcabal.org/
