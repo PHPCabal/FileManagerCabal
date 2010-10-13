@@ -1,13 +1,13 @@
 <?php
 
-function verificarContraseña( $usuario, $password ) {
+function verificarPassword( $usuario, $password ) {
     // verificar si no están vacíos
     if ( NULL !== $usuario && NULL !== $password ) {
 	    // Sanidad
 #	    mysql_real_escape_string( $usuario );
 #	    mysql_real_escape_string( $password );
 
-        // buscar usuario y su contraseña de la DB 
+        // buscar usuario y su password de la DB 
         $query = "SELECT usuario, password FROM usuarios WHERE usuario = '$usuario' AND password = md5('$password');";
 
 	    // realizar la query

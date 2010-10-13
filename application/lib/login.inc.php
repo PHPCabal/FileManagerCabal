@@ -26,7 +26,7 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
     }
 
     // verificar si el usuario existe
-    if ( verificarContraseña( $usuario_saneado, $password_saneada ) ) {
+    if ( verificarPassword( $usuario_saneado, $password_saneada ) ) {
         $mensaje = 'Si existes';
     } else {
         # code...
