@@ -1,3 +1,3 @@
 - *~
 - tmp/*
-- db.inc.php
+- application/db.inc.php
