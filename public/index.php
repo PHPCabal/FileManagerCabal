@@ -21,4 +21,8 @@
                 </p>
             </div>
 
+	    <div id="mensajes">
+	        <span><?php $mensaje = ( empty( $mensajes ) ) ? NULL : $mensajes;  echo $mensaje; ?></span>
+	    </div>
+
 <?php require_once( FMC_LIB_PATH . '/footer.inc.php' ); ?>
