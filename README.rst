@@ -1,4 +1,5 @@
-Proyecto para newbies.
+Proyecto para newbies
+=====================
 
 La idea es hacer un FileManager en PHP; usando objetos y sin MVC ni paradigmas complejos.
 

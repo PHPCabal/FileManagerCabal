@@ -5,15 +5,18 @@
 //
 
 // host
-define( 'FMC_DB_HOST', '' );
+define( 'FMC_DB_HOST', 'localhost' );
 
 // usuario (no usar root!!)
-define( 'FMC_DB_USER', '' );
+define( 'FMC_DB_USER', 'fmcabal' );
 
 // contraseña
-define( 'FMC_DB_PASSWORD', '' );
+define( 'FMC_DB_PASSWORD', 'password' );
 
 // nombre de la base de datos
-define( 'FMC_DB_DATABASE', '' );
+define( 'FMC_DB_DATABASE', 'fmcabal' );
+
+// character set a usar (utf8, latin1, etc)
+define( 'FMC_DB_CHARSET', 'utf8' )
 
 ?>
