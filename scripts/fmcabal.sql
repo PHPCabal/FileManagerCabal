@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.1.50, for redhat-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.1.50, for redhat-linux-gnu (i386)
 --
 -- Host: localhost    Database: fmcabal
 -- ------------------------------------------------------
@@ -24,12 +24,12 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `usuario` varchar(15) NOT NULL,
-  `password` varchar(35) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `usuario` varchar(15) COLLATE utf8_bin NOT NULL,
+  `password` varchar(35) COLLATE utf8_bin NOT NULL,
+  `email` varchar(255) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -41,4 +41,4 @@ CREATE TABLE `usuarios` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2010-10-13  5:26:07
+-- Dump completed on 2010-10-19 20:00:56
