@@ -28,4 +28,8 @@ define( 'FMC_LIB_PATH', FMC_APP_PATH . '/lib');
 // path de las formas
 define( 'FMC_FORM_PATH', FMC_APP_PATH . '/formas');
 
+// Sessiones
+session_save_path( FMC_APP_PATH . '/sessions' );
+session_cache_expire( 86400 / 4 );
+
 ?>

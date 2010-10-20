@@ -28,8 +28,14 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
     // verificar si el usuario existe
     if ( verificarPassword( $usuario_saneado, $password_saneada ) ) {
         $mensaje = 'Si existes';
+        
+        // iniciar sesión
+        session_start();
+        
+        // poner información útil del usuario en la sesión
+        $_SESSION['usuario'] = $usuario_saneado;
+        $_SESSION['autenticado'] = true;
     } else {
-        # code...
         $mensaje = 'No existes';
     }
 }
