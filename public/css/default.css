@@ -1,3 +1,53 @@
+/* General */
 body {
     font: 10pt verdana;
+}
+
+div#encabezado {
+
+}
+
+div#encabezado {
+    text-align: center;
+    font: 20pt arial;
+}
+
+div#navegacion {
+    background: #cec;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+div#contenido {
+
+}
+
+div#mensajes {
+
+}
+
+div#pie {
+    text-align: center;
+}
+
+/* Particular */
+div#navegacion ul#nav {
+    margin: 0;
+    padding: 0;
+}
+
+div#navegacion ul#nav li {
+    list-style: none;
+    display: inline;
+    margin: 0;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 0;
+}
+
+div#navegacion ul#nav a {
+    color: #03f;
+    font-weight: bold;
+    text-decoration: none;
 }
