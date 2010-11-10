@@ -1,5 +1,3 @@
 - Verificar que la contraseña sea segura (mínimo 8 caracteres, que sea alfanumérica, que contenga un signo y un número, etc)
-- Poner mensajes adecuados y no comprometedores.
 - Hacer logout
-- Transformar el CSS
 - Migrar a HTML 5 y CSS 3
