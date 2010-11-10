@@ -8,7 +8,7 @@ function verificarPassword( $usuario, $password ) {
 #	    mysql_real_escape_string( $password );
 
         // buscar usuario y su password de la DB 
-        $query = "SELECT usuario, password FROM usuarios WHERE usuario = '$usuario' AND password = md5('$password');";
+        $query = "SELECT usuario, password FROM usuarios WHERE usuario = '$usuario' AND password = sha1('$password');";
 
 	    // realizar la query
 	    $resultado = ejecutarQuery( $query );
