@@ -1,3 +1,4 @@
+set names utf8;
 DROP DATABASE IF EXISTS `fmcabal`;
 CREATE DATABASE `fmcabal` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 
