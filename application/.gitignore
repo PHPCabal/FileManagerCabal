@@ -1,2 +1,5 @@
+!files/
+!sessions/
+files/*
 sessions/*
 db.inc.php
