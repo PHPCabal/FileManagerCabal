@@ -1,3 +1,8 @@
+DROP DATABASE IF EXISTS `fmcabal`;
+CREATE DATABASE `fmcabal` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+
+use `fmcabal`;
+
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
