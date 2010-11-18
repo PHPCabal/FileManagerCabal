@@ -1,9 +1,0 @@
-# exclusiones
-files/*
-sessions/*
-db.inc.php
-
-# inclusiones
-!files/
-!sessions/
-

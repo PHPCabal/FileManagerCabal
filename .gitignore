@@ -1,2 +1,6 @@
+/application/config.inc.php
+/application/db.inc.php
+/application/sessions/*
+/application/files/*
+
 *~
-tmp/*
