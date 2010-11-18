@@ -1,8 +1,9 @@
+# exclusiones
 files/*
 sessions/*
-files/*
-!sessions/
-!files/
 db.inc.php
+
+# inclusiones
 !files/
 !sessions/
+
