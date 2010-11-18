@@ -5,8 +5,8 @@
 # archivos de configuración
 application/config.inc.php
 application/db.inc.php
-application/sessions/*
-application/files/*
+application/sessions/
+application/files/
 
 # archivos generados por el sistema
 .DS_Store?
@@ -19,5 +19,5 @@ Thumbs.db
 # Inclusiones
 #
 
-!application/sessions
-!application/files
+!application/sessions/
+!application/files/
