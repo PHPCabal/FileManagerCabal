@@ -21,4 +21,4 @@ Hecho esto, basta con utilizar este usuario para crear la estructura de la base
 de datos. Al hacer ésto, los datos que tengas en la base de datos desaparecerán;
 ten cuidado.
 
- mysql -u usuario -p fmcabal < /path/a/FileManagerCabal/scripts/fmcabal.sql
+ mysql -u usuario -p fmcabal < /path/a/FileManagerCabal/scripts/ejemplo.sql
