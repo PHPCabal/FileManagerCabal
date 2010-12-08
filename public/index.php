@@ -8,17 +8,21 @@
             </div>
 
             <div id="navegacion">
-<?php require_once( FMC_LIB_PATH . '/nav.inc.php' ); ?>
+<?php require_once( FMC_LIB_PATH . DIRECTORY_SEPARATOR . 'nav.inc.php' ); ?>
             </div>
 
             <div id="login">
-<?php require_once( FMC_LIB_PATH . '/login.inc.php' ); ?>
+<?php require_once( FMC_LIB_PATH . DIRECTORY_SEPARATOR . 'login.inc.php' ); ?>
             </div>
 
             <div id="contenido">
                 <p>
                     Hola, mundo!
                 </p>
+
+                <div id="listado">
+                    <?php require_once( FMC_LIB_PATH . DIRECTORY_SEPARATOR . 'listing.inc.php' ); ?>
+                </div>
             </div>
 
 	    <div id="mensajes">
