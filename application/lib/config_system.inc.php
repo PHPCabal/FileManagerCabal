@@ -28,6 +28,9 @@ define( 'FMC_LIB_PATH', FMC_APP_PATH . DIRECTORY_SEPARATOR . 'lib' );
 // path de las formas
 define( 'FMC_FORM_PATH', FMC_APP_PATH . DIRECTORY_SEPARATOR . 'formas' );
 
+// path de los archivos 
+define( 'FMC_FILES_PATH', FMC_APP_PATH . DIRECTORY_SEPARATOR . 'files' );
+
 // Sessiones
 session_save_path( FMC_APP_PATH . DIRECTORY_SEPARATOR . 'sessions' );
 session_cache_expire( 86400 / 4 );

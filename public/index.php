@@ -1,3 +1,4 @@
+<?php $timer_start = microtime( true ); ?>
 <?php require_once( '../application/config.inc.php' ); ?>
 <?php require_once( FMC_LIB_PATH . '/header.inc.php' ); ?>
 
