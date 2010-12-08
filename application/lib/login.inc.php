@@ -1,7 +1,7 @@
 <?php
 
 // incluir funciones
-require_once( FMC_LIB_PATH . '/main.inc.php');
+require_once( FMC_LIB_PATH . DIRECTORY_SEPARATOR . 'main.inc.php');
 
 $mensaje = '';
 
@@ -40,7 +40,7 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
     }
 }
 
-require_once( FMC_FORM_PATH . '/login.frm.php' );
+require_once( FMC_FORM_PATH . DIRECTORY_SEPARATOR . 'login.frm.php' );
 
 echo $mensaje;
 ?>
