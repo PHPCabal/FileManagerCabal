@@ -20,7 +20,40 @@ div#navegacion {
 }
 
 div#contenido {
+    margin: auto;
+    padding: .5em 1em .5em 1em;
+    max-width: 800px;
+}
 
+div#archivos {
+}
+
+div#archivos div.archivo {
+    display: block;
+}
+
+div#archivos div.archivo {
+}
+
+div#archivos div.archivo:hover {
+    background: #6cf;
+    cursor: pointer;
+}
+
+div.archivo span {
+    display: inline-block;
+}
+
+div#archivos span.archivo {
+    width: 50%;
+}
+
+div#archivos span.descargar {
+    width: 24%;
+}
+
+div#archivos span.borrar {
+    width: 24%;
 }
 
 div#mensajes {

@@ -11,4 +11,14 @@ if ($handle = opendir( FMC_FILES_PATH ) ) {
     closedir($handle);
 }
 
-print_r( $files );
+foreach ( $files as $file ) {
+    echo <<<EOF
+
+<div class="archivo">
+    <span class="archivo">${file}</span>
+    <span class="descargar">descargar</span>
+    <span class="borrar">borrar</span>
+</div>
+
+EOF;
+};

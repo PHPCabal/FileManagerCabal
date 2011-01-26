@@ -21,7 +21,7 @@
                     Hola, mundo!
                 </p>
 
-                <div id="listado">
+                <div id="archivos">
                     <?php require_once( FMC_LIB_PATH . DIRECTORY_SEPARATOR . 'listing.inc.php' ); ?>
                 </div>
             </div>
