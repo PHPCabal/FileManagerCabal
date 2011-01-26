@@ -5,6 +5,9 @@ require_once( FMC_LIB_PATH . DIRECTORY_SEPARATOR . 'main.inc.php');
 
 $mensaje = '';
 
+// iniciar sesión TODO: mover a un archivo de bootstrap
+session_start();
+        
 if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
 
     // validar si nombre es string (alfanumérica)
@@ -29,18 +32,21 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
     if ( verificarPassword( $usuario_saneado, $password_saneada ) ) {
         $mensaje = 'Si existes';
         
-        // iniciar sesión
-        session_start();
-        
         // poner información útil del usuario en la sesión
         $_SESSION['usuario'] = $usuario_saneado;
         $_SESSION['autenticado'] = true;
     } else {
         $mensaje = 'No existes';
     }
+} elseif ( isset( $_POST['logout'] ) && $_POST['logout'] === 'Logout' ) {
+    unset( $_SESSION['autenticado'] );
+    unset( $_SESSION['usuario'] );
 }
 
-require_once( FMC_FORM_PATH . DIRECTORY_SEPARATOR . 'login.frm.php' );
+if ( !empty( $_SESSION['usuario'] ) && $_SESSION['autenticado'] === true ) {
+    require_once( FMC_FORM_PATH . DIRECTORY_SEPARATOR . 'logout.frm.php' );
+} else {
+    require_once( FMC_FORM_PATH . DIRECTORY_SEPARATOR . 'login.frm.php' );
+}
 
 echo $mensaje;
-?>
