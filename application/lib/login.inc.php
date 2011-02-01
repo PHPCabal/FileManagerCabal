@@ -48,5 +48,3 @@ if ( !empty( $_SESSION['usuario'] ) && $_SESSION['autenticado'] === true ) {
 } else {
     require_once( FMC_FORM_PATH . DIRECTORY_SEPARATOR . 'login.frm.php' );
 }
-
-echo $mensaje;
