@@ -1,6 +1,6 @@
             <div id="pie">
                 <p>
-                    <span><a href="<?php echo FMC_URL; ?>/README">acerca</a></span>
+                    <span><a href="<?php echo FMC_URL; ?>/README.rst">acerca</a></span>
                     <span>|</span>
                     <span><a href="http://groups.google.com/group/PHPCabal">PHPCabal</a></span>
                     <span>|</span>
