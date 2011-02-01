@@ -33,16 +33,16 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
         $_SESSION['autenticado'] = true;
         
         // mensaje
-        $mensaje = "Bienvenido, ${usuario_saneado}.";
+        $mensaje = "Bienvenido, {$usuario_saneado}.";
     } else {
         $mensaje .= 'No coincide la combinación de usuario y password. Inténtalo de nuevo.';
     }
 } elseif ( isset( $_POST['logout'] ) && $_POST['logout'] === 'Logout' ) {
+    // mensaje
+    $mensaje = "Tu sesión ha terminado, {$_SESSION['usuario']}. ¡Que tengas buen día!";
+    
     unset( $_SESSION['autenticado'] );
     unset( $_SESSION['usuario'] );
-    
-    // mensaje
-    $mensaje = "Tu sesión ha terminado, ${usuario_saneado}. ¡Que tengas buen día!";
 }
 
 if ( !empty( $_SESSION['usuario'] ) && $_SESSION['autenticado'] === true ) {
