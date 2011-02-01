@@ -14,7 +14,8 @@
         <!--CSS, feeds & favicon -->
         <link href="<?php echo FMC_URL; ?>/images/favicon.ico" rel="shortcut icon" />
         <link href="<?php echo FMC_URL; ?>/images/favicon.ico" rel="favicon" />
-        <link href="<?php echo FMC_URL; ?>/css/default.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="<?php echo FMC_URL; ?>/css/layout.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="<?php echo FMC_URL; ?>/css/default.css" media="all" rel="stylesheet" type="text/css" />
         <link href="<?php echo FMC_URL; ?>/feed/noticias.rss" rel="alternate" type="application/rss+xml" title="Noticias" />
 
         <!--Javascript -->
