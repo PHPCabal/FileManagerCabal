@@ -1,0 +1,25 @@
+div#archivos div.archivo {
+    display: block;
+}
+
+div.archivo span {
+    display: inline-block;
+}
+
+div#archivos span.archivo {
+    width: 70%;
+}
+
+div#archivos span.descargar {
+    width: 14%;
+}
+
+div#archivos span.borrar {
+    width: 14%;
+}
+
+div#mensajes {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}

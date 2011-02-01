@@ -1,4 +1,3 @@
-/* General Simón */
 body {
     font: 10pt verdana;
 }
@@ -25,14 +24,8 @@ div#contenido {
     max-width: 800px;
 }
 
-div#archivos {
-}
-
 div#archivos div.archivo {
     display: block;
-}
-
-div#archivos div.archivo {
 }
 
 div#archivos div.archivo:hover {
@@ -40,47 +33,10 @@ div#archivos div.archivo:hover {
     cursor: pointer;
 }
 
-div.archivo span {
-    display: inline-block;
-}
-
-div#archivos span.archivo {
-    width: 50%;
-}
-
-div#archivos span.descargar {
-    width: 24%;
-}
-
-div#archivos span.borrar {
-    width: 24%;
-}
-
 div#mensajes {
-
+    background: #afa;
 }
 
 div#pie {
     text-align: center;
-}
-
-/* Particular */
-div#navegacion ul#nav {
-    margin: 0;
-    padding: 0;
-}
-
-div#navegacion ul#nav li {
-    list-style: none;
-    display: inline;
-    margin: 0;
-    margin-left: 2em;
-    margin-right: 2em;
-    padding: 0;
-}
-
-div#navegacion ul#nav a {
-    color: #03f;
-    font-weight: bold;
-    text-decoration: none;
 }
