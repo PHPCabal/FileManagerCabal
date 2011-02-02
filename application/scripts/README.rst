@@ -6,10 +6,12 @@ Aquí están las instrucciones de cómo usar cada scripts; ubicados en http://gi
 instalarMySQLDb
 ===============
 
-Si no quieres batallar, solo dale permisos 700 a éste y córrelo:
+Si no quieres batallar, solo dale permisos 700 a éste y córrelo.
 
-  chmod 700 instalarMySQLDb
-  bash instalarMySQLDb
+::
+
+    chmod 700 instalarMySQLDb
+    bash instalarMySQLDb
 
 Si corriste ésto, ya no tienes que correr nada más. 
 
@@ -19,7 +21,9 @@ Actualmente, funciona con Fedora; no lo hemos probado con otro software.
 desinstalarMySQLDb
 ==================
 
-Éste funciona igual que el otro pero para desinstalar. Sólamente dale permisos 700 y córrelo:
+Éste funciona igual que el otro pero para desinstalar. Sólamente dale permisos 700 y córrelo.
+
+::
 
     chmod 700 desinstalarMySQLDb
     bash desinstalarMySQLDb
@@ -38,7 +42,9 @@ fmcabal.sql
 ===========
 
 Al hacer ésto, los datos que tengas en la base de datos desaparecerán;
-ten cuidado:
+ten cuidado.
+
+::
 
     mysql -u root -p < fmcabal.sql
 
@@ -46,7 +52,7 @@ ten cuidado:
 ejemplo.sql
 ===========
 
-Éste instala los datos de ejemploj. Si lo corres dos veces seguidas, tendrás datos duplicados:
+Éste instala los datos de ejemploj. Si lo corres dos veces seguidas, tendrás datos duplicados.
 
     mysql -u root -p fmcabal < ejemplo.sql
 
@@ -54,7 +60,9 @@ ejemplo.sql
 usuario.sql
 ===========
 
-Éste es esencial para que FileManagerCabal pueda accesar a los datos. Te recomendamos que lo edites:
+Éste es esencial para que FileManagerCabal pueda accesar a los datos. Te recomendamos que lo edites.
+
+::
 
     mysql -u root -p < usuario.sql
 
@@ -62,6 +70,8 @@ usuario.sql
 Notas
 =====
 
-Si no has puesto password para root en MySQL, omite la -p. Te recomendamos no hacer esto y correr el script: mysql_secure_installation:
+Si no has puesto password para root en MySQL, omite la -p. Te recomendamos no hacer esto y correr el script: mysql_secure_installation.
+
+::
 
     mysql_secure_installation
