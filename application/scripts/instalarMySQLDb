@@ -1,0 +1,76 @@
+#!/bin/bash
+shopt extglob &> /dev/null
+
+function getDistro() {
+    # test for fedora
+    case "$( grep -io fedora /etc/system-release )" in
+    Fedora)
+        export distro="Fedora"
+        return 0
+        ;;
+    *)
+        return 1
+        ;;
+    esac
+}
+
+# obtener distro
+getDistro
+
+if [[ "$distro" == 'Fedora' ]]; then
+    while [[ -z "$answer" ]]; do
+        rpm -q mysql-server &> /dev/null
+        
+        if (( $? )); then
+            echo -n 'No tienes MySQL instalado; quieres que lo instale? (s|n) '
+            read -n 1 answer
+            echo
+            
+            if [[ "$answer" == +(s|S) ]]; then
+                su -c 'yum install -y mysql-server'
+            elif [[ "$answer" == +(n|N) ]]; then
+                echo -en 'qué?!'; sleep 1; echo -n '.'; sleep 1; echo -n '.'; sleep 1; echo -n '.'; sleep 1
+                
+                echo -e '\n\nNo puedo continuar con la instalación de la DB sin mysql-server...'
+                exit 1
+            else
+                echo "Huh?..."
+                exit 2
+            fi
+        else
+            break
+        fi
+    done
+    
+    if (( ! $? )); then
+        echo -n "Cuál es tu contraseña de root en MySQL? (si no tienes, presiona <Enter>) "
+        read -s password
+        echo
+
+        # inicia el servicio
+        echo 'Voy a iniciar el servicio; pon el password de root...'
+        su -c 'service mysqld restart'
+        
+        # crear db
+        mysql -u root --password=$password < db.sql
+        
+        if (( $? )); then echo 'Hubo un error en la creación de la DB...'; exit 4; fi
+        
+        # crear usuario y dar permisos en la db
+        mysql -u root --password=$password fmcabal < usuario.sql
+        
+        if (( $? )); then echo 'Hubo un error en la creación del usuario...'; exit 5; fi
+        
+        # meter datos de ejemplo
+        mysql -u root --password=$password fmcabal < ejemplo.sql
+        
+        if (( $? )); then echo 'Hubo un error en la introducción de los datos de ejemplo...'; exit 6; fi
+        
+        echo "Tu DB con los datos de ejemplo ya están instalados. Gracias por usar nuestro super script tan chingón!"
+        
+        exit 0
+    else
+        echo 'Algo salió mal y no se instaló la DB...'
+        exit 3
+    fi
+fi

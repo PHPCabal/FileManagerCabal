@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -n "Cuál es tu contraseña de root en MySQL? (si no tienes, presiona <Enter>) "
+read -s password
+echo
+
+mysql -u root --password=$password < limpiar.sql &> /dev/null
+
+if (( ! $? )); then
+    exit 0
+else
+    echo "No se pudo desinstalar la DB; puede ser que no exista..."
+fi
