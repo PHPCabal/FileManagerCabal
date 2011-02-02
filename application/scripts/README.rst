@@ -7,7 +7,7 @@ instalarMySQLDb
 =============
 
 Si no quieres batallar, solo dale permisos 700 a éste y córrelo:
-
+::
     chmod 700 instalarMySQLDb
     bash instalarMySQLDb
 
