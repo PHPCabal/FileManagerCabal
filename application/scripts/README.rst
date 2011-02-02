@@ -1,15 +1,15 @@
 Acerca
 ======
 
-Aquí están las instrucciones de cómo usar cada scripts; ubicados en [[scripts|http://github.com/renich/FileManagerCabal/tree/master/scripts/]]
+Aquí están las instrucciones de cómo usar cada scripts; ubicados en [scripts|http://github.com/renich/FileManagerCabal/tree/master/scripts/]
 
 instalarMySQLDb
 =============
 
 Si no quieres batallar, solo dale permisos 700 a éste y córrelo
 
- chmod 700 instalarMySQLDb
- bash instalarMySQLDb
+`chmod 700 instalarMySQLDb`
+`bash instalarMySQLDb`
 
 Si corriste ésto, ya no tienes que correr nada más. 
 
