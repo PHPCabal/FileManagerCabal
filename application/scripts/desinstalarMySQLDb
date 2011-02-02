@@ -7,6 +7,7 @@ echo
 mysql -u root --password=$password < limpiar.sql &> /dev/null
 
 if (( ! $? )); then
+    echo "La DB y el usuario han sido desinstalados. Gracias por utilizar FMCabal..."
     exit 0
 else
     echo "No se pudo desinstalar la DB; puede ser que no exista..."
