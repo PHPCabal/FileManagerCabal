@@ -1,4 +1,2 @@
-- Verificar que la contraseña sea segura (mínimo 8 caracteres, que sea alfanumérica, que contenga un signo y un número, etc)
-- Hacer logout
+- Verificar que la contraseña sea segura (mínimo 6 caracteres, que sea alfanumérica, que contenga un signo y un número, etc)
 - Migrar a HTML 5 y CSS 3
-- Hacer el output de la lista de archivos de manera adecuada, ordenada y corta.
