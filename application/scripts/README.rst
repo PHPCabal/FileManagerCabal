@@ -3,22 +3,65 @@ Acerca
 
 Aquí están las instrucciones de cómo usar cada scripts; ubicados en [[scripts|http://github.com/renich/FileManagerCabal/tree/master/scripts/]]
 
+instalarMySQLDb
+=============
+
+Si no quieres batallar, solo dale permisos 700 a éste y córrelo
+
+ chmod 700 instalarMySQLDb
+ bash instalarMySQLDb
+
+Si corriste ésto, ya no tienes que correr nada más. 
+
+Actualmente, funciona con Fedora; no lo hemos probado con otro software.
+
+
+desinstalarMySQLDb
+================
+
+Éste funciona igual que el otro pero para desinstalar. Sólamente dale permisos 700 y córrelo:
+
+ chmod 700 desinstalarMySQLDb
+ bash desinstalarMySQLDb
+
+Mucho cuidado. El script destruirá todos los datos de FileManagerCabal en la DB, ok?
+
+Éste, probablemente, funcione con casi todo... lo POSIX, heheh...
+
+
+Scripts SQL
+=========
+
+Si no quieres correr el instalador, no hay problema; te ofrecemos instrucciones para que puedas correr los scripts SQL independientemente.
+
 fmcabal.sql
 ===========
 
-Para poder usar la estructura de tablas predeterminada, necesitas, primero,
-entrar a mysql y crear una base de datos.
-
- mysql -u root -p
- CREATE DATABASE fmcabal CHARACTER SET utf8;
-
-Después, crear un usuario que la utilice. Por favor, no uses a root para accesar
-la base de datos.
-
- GRANT ALL PRIVILEGES ON fmcabal.* TO 'usuario'@'localhost' IDENTIFIED BY '.p@s5W0r6_S36u70&';
-
-Hecho esto, basta con utilizar este usuario para crear la estructura de la base
-de datos. Al hacer ésto, los datos que tengas en la base de datos desaparecerán;
+Al hacer ésto, los datos que tengas en la base de datos desaparecerán;
 ten cuidado.
 
- mysql -u usuario -p fmcabal < /path/a/FileManagerCabal/scripts/ejemplo.sql
+ mysql -u root -p < fmcabal.sql
+
+
+ejemplo.sql
+=========
+
+Éste instala los datos de ejemploj. Si lo corres dos veces seguidas, tendrás datos duplicados.
+
+ mysql -u root -p fmcabal < ejemplo.sql
+
+
+usuario.sql
+========
+
+Éste es esencial para que FileManagerCabal pueda accesar a los datos. Te recomendamos que lo edites.
+
+ mysql -u root -p < usuario.sql
+
+
+Notas
+=====
+
+Si no has puesto password para root en MySQL, omite la -p. Te recomendamos no hacer esto y correr el script: mysql_secure_installation 
+
+ mysql_secure_installation
