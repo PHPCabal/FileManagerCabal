@@ -4,12 +4,12 @@ Acerca
 Aquí están las instrucciones de cómo usar cada scripts; ubicados en http://github.com/renich/FileManagerCabal/tree/master/scripts/
 
 instalarMySQLDb
-=============
+===============
 
 Si no quieres batallar, solo dale permisos 700 a éste y córrelo:
-::
-    chmod 700 instalarMySQLDb
-    bash instalarMySQLDb
+
+  chmod 700 instalarMySQLDb
+  bash instalarMySQLDb
 
 Si corriste ésto, ya no tienes que correr nada más. 
 
@@ -17,7 +17,7 @@ Actualmente, funciona con Fedora; no lo hemos probado con otro software.
 
 
 desinstalarMySQLDb
-================
+==================
 
 Éste funciona igual que el otro pero para desinstalar. Sólamente dale permisos 700 y córrelo:
 
@@ -30,7 +30,7 @@ Mucho cuidado. El script destruirá todos los datos de FileManagerCabal en la DB
 
 
 Scripts SQL
-=========
+===========
 
 Si no quieres correr el instalador, no hay problema; te ofrecemos instrucciones para que puedas correr los scripts SQL independientemente.
 
@@ -44,7 +44,7 @@ ten cuidado:
 
 
 ejemplo.sql
-=========
+===========
 
 Éste instala los datos de ejemploj. Si lo corres dos veces seguidas, tendrás datos duplicados:
 
@@ -52,7 +52,7 @@ ejemplo.sql
 
 
 usuario.sql
-========
+===========
 
 Éste es esencial para que FileManagerCabal pueda accesar a los datos. Te recomendamos que lo edites:
 
