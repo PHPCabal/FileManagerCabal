@@ -27,7 +27,7 @@
             </div>
 
 	    <div id="mensajes">
-	        <span><?php $mensajes = ( empty( $mensaje ) ) ? NULL : $mensaje;  echo $mensajes; ?></span>
+	        <span><?php $mensajes = ( empty( $mensaje ) ) ? NULL : $mensaje;  print_r( $mensajes ); ?></span>
 	    </div>
 
 <?php require_once( FMC_LIB_PATH . '/footer.inc.php' ); ?>

@@ -1,27 +1,5 @@
 <?php
 
-function verificarPassword( $usuario, $password ) {
-    // verificar si no están vacíos
-    if ( NULL !== $usuario && NULL !== $password ) {
-	    // Sanidad
-#	    mysql_real_escape_string( $usuario );
-#	    mysql_real_escape_string( $password );
-
-        // buscar usuario y su password de la DB 
-        $query = "SELECT usuario, password FROM usuarios WHERE usuario = '$usuario' AND password = sha1('$password');";
-
-	    // realizar la query
-	    $resultado = ejecutarQuery( $query );
-	    
-	    // regresa true si existe y false si no
-	    if ( $resultado ) {
-	        return true;
-	    } else {
-	        return false;
-	    }
-    }
-}
-
 function ejecutarQuery( $query ) {
     
     // iniciar conexión
@@ -67,4 +45,44 @@ function ejecutarQuery( $query ) {
     }
 }
 
-?>
+function imprimirError( $mensajes = array() ) {
+	# verificar array()
+	if ( empty( $mensajes ) ) {
+		return false;
+	}
+
+	# ver si es de error o no
+	foreach ( $mensajes as $tipo => $mensaje ) {
+		if ( $tipo == 'error' ) {
+		} elseif ( $tipo == 'éxito' ) {
+		} else {
+			return false;
+		}
+	}
+
+	# regresar el contenido
+	return $mensajesFormateados;
+}
+
+function verificarPassword( $usuario, $password ) {
+    // verificar si no están vacíos
+    if ( NULL !== $usuario && NULL !== $password ) {
+	    // Sanidad
+#	    mysql_real_escape_string( $usuario );
+#	    mysql_real_escape_string( $password );
+
+        // buscar usuario y su password de la DB 
+        $query = "SELECT usuario, password FROM usuarios WHERE usuario = '$usuario' AND password = sha1('$password');";
+
+	    // realizar la query
+	    $resultado = ejecutarQuery( $query );
+	    
+	    // regresa true si existe y false si no
+	    if ( $resultado ) {
+	        return true;
+	    } else {
+	        return false;
+	    }
+    }
+}
+

@@ -3,11 +3,11 @@
 // incluir funciones
 require_once( FMC_LIB_PATH . DIRECTORY_SEPARATOR . 'main.inc.php');
 
-$mensaje = null;
+$mensaje = array();
 
 // iniciar sesión TODO: mover a un archivo de bootstrap
 session_start();
-        
+ 
 if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
 
     // validar si nombre es string (alfanumérica)
@@ -15,7 +15,9 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
          
     if ( !filter_var( $usuario_saneado, FILTER_VALIDATE_REGEXP, array( "options" => array( "regexp" => "#^([a-zA-Z0-9ñÑáéíóúÁÉÍÓÚüÜ]+$.*)#" ) ) ) ) {
         // mensaje
-        $mensaje .= 'Tu usuario contiene caracteres no admitidos.';
+        $mensaje['error'][] = 'Tu usuario contiene caracteres no admitidos.';
+
+        # return false;
     }
     
     // validar si contraseña es string (alfanumérica)
@@ -23,7 +25,9 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
          
     if ( strlen( $password_saneada ) < 6 ) {
         // mensaje
-        $mensaje .= 'Tu password no cumple con los requerimientos.';
+        $mensaje['error'][] = 'Tu password no cumple con los requerimientos.';
+
+        # return false;
     }
 
     // verificar si el usuario existe
@@ -33,19 +37,25 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
         $_SESSION['autenticado'] = true;
         
         // mensaje
-        $mensaje = "Bienvenido, {$usuario_saneado}.";
+        $mensaje['éxito'][] = "Bienvenido, {$usuario_saneado}.";
+
+        # return true;
     } else {
-        $mensaje .= 'No coincide la combinación de usuario y password. Inténtalo de nuevo.';
+        $mensaje['error'][] = 'No coincide la combinación de usuario y password. Inténtalo de nuevo.';
+
+        # return false;
     }
 } elseif ( isset( $_POST['logout'] ) && $_POST['logout'] === 'Logout' ) {
     // mensaje
-    $mensaje = "Tu sesión ha terminado, {$_SESSION['usuario']}. ¡Que tengas buen día!";
+    $mensaje['éxito'][] = "Tu sesión ha terminado, {$_SESSION['usuario']}. ¡Que tengas buen día!";
     
     unset( $_SESSION['autenticado'] );
     unset( $_SESSION['usuario'] );
+
+    # return true;
 }
 
-if ( !empty( $_SESSION['usuario'] ) && $_SESSION['autenticado'] === true ) {
+if ( !empty( $_SESSION['usuario'] ) && $_SESSION['autenticado'] == true ) {
     require_once( FMC_FORM_PATH . DIRECTORY_SEPARATOR . 'logout.frm.php' );
 } else {
     require_once( FMC_FORM_PATH . DIRECTORY_SEPARATOR . 'login.frm.php' );
