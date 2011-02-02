@@ -1,14 +1,14 @@
 Acerca
 ======
 
-Aquí están las instrucciones de cómo usar cada scripts; ubicados en [scripts|http://github.com/renich/FileManagerCabal/tree/master/scripts/]
+Aquí están las instrucciones de cómo usar cada scripts; ubicados en http://github.com/renich/FileManagerCabal/tree/master/scripts/
 
 instalarMySQLDb
 =============
 
 Si no quieres batallar, solo dale permisos 700 a éste y córrelo
 
-`chmod 700 instalarMySQLDb`
+`chmod 700 instalarMySQLDb`;
 `bash instalarMySQLDb`
 
 Si corriste ésto, ya no tienes que correr nada más. 
@@ -21,7 +21,7 @@ desinstalarMySQLDb
 
 Éste funciona igual que el otro pero para desinstalar. Sólamente dale permisos 700 y córrelo:
 
- chmod 700 desinstalarMySQLDb
+`chmod 700 desinstalarMySQLDb`;
  bash desinstalarMySQLDb
 
 Mucho cuidado. El script destruirá todos los datos de FileManagerCabal en la DB, ok?
