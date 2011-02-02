@@ -48,8 +48,12 @@ if [[ "$distro" == 'Fedora' ]]; then
         echo
 
         # inicia el servicio
-        echo 'Voy a iniciar el servicio; pon el password de root...'
-        su -c 'service mysqld restart'
+        ps -A | grep -q mysqld
+        
+        if (( $? )); then
+            echo 'Voy a iniciar el servicio; pon el password de root...'
+            su -c 'service mysqld restart'
+        fi
         
         # crear db
         mysql -u root --password=$password < db.sql
