@@ -24,10 +24,19 @@
                 <div id="archivos">
                     <?php require_once( FMC_LIB_PATH . DIRECTORY_SEPARATOR . 'listing.inc.php' ); ?>
                 </div>
+
             </div>
 
-	    <div id="mensajes">
-	        <span><?php $mensajes = ( empty( $mensaje ) ) ? NULL : $mensaje;  print_r( $mensajes ); ?></span>
-	    </div>
+            <div id="mensajes">
+<?php 
+
+# definir mensajes
+$mensajes = ( empty( $mensajes ) ) ? NULL :  imprimirErrores( $mensajes ); 
+
+# imprimir mensajes
+echo $mensajes;
+
+?>
+            </div>
 
 <?php require_once( FMC_LIB_PATH . '/footer.inc.php' ); ?>

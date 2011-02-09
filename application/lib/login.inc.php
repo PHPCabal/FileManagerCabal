@@ -15,7 +15,7 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
          
     if ( !filter_var( $usuario_saneado, FILTER_VALIDATE_REGEXP, array( "options" => array( "regexp" => "#^([a-zA-Z0-9ñÑáéíóúÁÉÍÓÚüÜ]+$.*)#" ) ) ) ) {
         // mensaje
-        $mensaje['error'][] = 'Tu usuario contiene caracteres no admitidos.';
+        $mensajes['error'][] = 'Tu usuario contiene caracteres no admitidos.';
 
         # return false;
     }
@@ -25,7 +25,7 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
          
     if ( strlen( $password_saneada ) < 6 ) {
         // mensaje
-        $mensaje['error'][] = 'Tu password no cumple con los requerimientos.';
+        $mensajes['error'][] = 'Tu password no cumple con los requerimientos.';
 
         # return false;
     }
@@ -37,17 +37,17 @@ if ( isset( $_POST['enviar'] ) && $_POST['enviar'] === 'Enviar' ) {
         $_SESSION['autenticado'] = true;
         
         // mensaje
-        $mensaje['éxito'][] = "Bienvenido, {$usuario_saneado}.";
+        $mensajes['éxito'][] = "Bienvenido, {$usuario_saneado}.";
 
         # return true;
     } else {
-        $mensaje['error'][] = 'No coincide la combinación de usuario y password. Inténtalo de nuevo.';
+        $mensajes['error'][] = 'No coincide la combinación de usuario y password. Inténtalo de nuevo.';
 
         # return false;
     }
 } elseif ( isset( $_POST['logout'] ) && $_POST['logout'] === 'Logout' ) {
     // mensaje
-    $mensaje['éxito'][] = "Tu sesión ha terminado, {$_SESSION['usuario']}. ¡Que tengas buen día!";
+    $mensajes['éxito'][] = "Tu sesión ha terminado, {$_SESSION['usuario']}. ¡Que tengas buen día!";
     
     unset( $_SESSION['autenticado'] );
     unset( $_SESSION['usuario'] );

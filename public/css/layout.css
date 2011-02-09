@@ -23,3 +23,7 @@ div#mensajes {
     text-align: center;
     width: 80%;
 }
+
+div#mensajes span {
+    display: block;
+}
