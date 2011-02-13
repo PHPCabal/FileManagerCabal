@@ -34,7 +34,16 @@ div#archivos div.archivo:hover {
 }
 
 div#mensajes {
-    background: #afa;
+    font-weight: bold;
+}
+
+div#mensajes span.error {
+    background: #f00;
+    color: #fe0;
+}
+
+div#mensajes span.éxito {
+    background: #0f0;
 }
 
 div#pie {

@@ -16,7 +16,7 @@ function ejecutarQuery( $query ) {
     
     // llevar acabo conexión
     if ( !mysqli_real_connect( $link, FMC_DB_HOST, FMC_DB_USER, FMC_DB_PASSWORD, FMC_DB_DATABASE ) ) {   
-	    die( 'Error de conexión (' . mysqli_connect_errno() . ') ' . mysqli_connect_error() );
+        die( 'Error de conexión (' . mysqli_connect_errno() . ') ' . mysqli_connect_error() );
     }
     
     // asegurar el character set
@@ -27,8 +27,8 @@ function ejecutarQuery( $query ) {
     // llevar acabo query
     if ( $resultado = mysqli_query( $link, $query ) ) {
         while ( $registro = mysqli_fetch_assoc( $resultado ) ) {
-	        $datos[] = $registro;
-	    }
+            $datos[] = $registro;
+        }
     } else {
         die( 'La query falló' );
     }
@@ -45,44 +45,52 @@ function ejecutarQuery( $query ) {
     }
 }
 
-function imprimirError( $mensajes = array() ) {
-	# verificar array()
-	if ( empty( $mensajes ) ) {
-		return false;
-	}
+function imprimirErrores( $mensajes = array() ) {
+    # vars
+    $mensajesFormateados = null;
 
-	# ver si es de error o no
-	foreach ( $mensajes as $tipo => $mensaje ) {
-		if ( $tipo == 'error' ) {
-		} elseif ( $tipo == 'éxito' ) {
-		} else {
-			return false;
-		}
-	}
+    # verificar array()
+    if ( empty( $mensajes ) ) {
+        return false;
+    }
 
-	# regresar el contenido
-	return $mensajesFormateados;
+    # ver si es de error o no
+    foreach ( $mensajes as $tipo => $mensaje ) {
+        if ( $tipo == 'error' || $tipo == 'éxito' ) {
+            foreach ( $mensaje as $key => $texto ) {
+                $mensajesFormateados .= "<span class='$tipo'>$texto</span>\n";
+            }
+        } else {
+            return false;
+        }
+    }
+
+    # explotar el array
+    
+
+    # regresar el contenido
+    return $mensajesFormateados;
 }
 
 function verificarPassword( $usuario, $password ) {
     // verificar si no están vacíos
     if ( NULL !== $usuario && NULL !== $password ) {
-	    // Sanidad
-#	    mysql_real_escape_string( $usuario );
-#	    mysql_real_escape_string( $password );
+        // Sanidad
+#        mysql_real_escape_string( $usuario );
+#        mysql_real_escape_string( $password );
 
         // buscar usuario y su password de la DB 
         $query = "SELECT usuario, password FROM usuarios WHERE usuario = '$usuario' AND password = sha1('$password');";
 
-	    // realizar la query
-	    $resultado = ejecutarQuery( $query );
-	    
-	    // regresa true si existe y false si no
-	    if ( $resultado ) {
-	        return true;
-	    } else {
-	        return false;
-	    }
+        // realizar la query
+        $resultado = ejecutarQuery( $query );
+        
+        // regresa true si existe y false si no
+        if ( $resultado ) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
