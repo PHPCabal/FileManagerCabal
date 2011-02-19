@@ -11,14 +11,22 @@ if ($handle = opendir( FMC_FILES_PATH ) ) {
     closedir($handle);
 }
 
-foreach ( $files as $file ) {
-    echo <<<EOF
+if ( !empty($files) ) {
+    foreach ( $files as $file ) {
+        echo <<<EOF
 
 <div class="archivo">
-    <span class="archivo">${file}</span>
+    <span class="archivo">{$file}</span>
     <span class="descargar">descargar</span>
     <span class="borrar">borrar</span>
 </div>
 
 EOF;
-};
+    }
+} else {
+    echo <<<EOF
+<div class="archivo">
+    <span class="archivo">Por lo pronto, no hay archivos.</span>
+</div>
+EOF;
+}
