@@ -1,4 +1,4 @@
-<form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
+<form method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
     <label>Usuario:</label>
     <input type="text" name="usuario" maxlength="20" value="" />
 
