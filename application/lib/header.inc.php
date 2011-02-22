@@ -5,7 +5,7 @@
         <!--Meta tags -->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta http-equiv="Content-Language" content="es-MX" />
-        <meta name="keywords" content="FileManagerCabal, FMCabal, File Manager, File, Manager, Cabal, LinuxCabal, Linux Cabal, Linux, GNU & Linux, GNU/Linux, GNU" />
+        <meta name="keywords" content="FileManagerCabal, FMCabal, File Manager, File, Manager, Cabal, LinuxCabal, Linux Cabal, Linux, GNU &amp; Linux, GNU/Linux, GNU" />
         <meta name="description" content="Proyecto de aprendizaje en PHP" />
 
         <!--Title -->
